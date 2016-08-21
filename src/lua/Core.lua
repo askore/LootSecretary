@@ -8,5 +8,8 @@ TODO/Notes
 
 ]]
 
-LootSecretary = LibStub("AceAddon-3.0"):NewAddon("LootSecretary", "AceConsole-3.0", "AceEvent-3.0", "AceComm-3.0");
-local libwin = LibStub("LibWindow-1.1");
+-- LootSecretary = LibStub("AceAddon-3.0"):NewAddon("LootSecretary", "AceConsole-3.0", "AceEvent-3.0", "AceComm-3.0");
+-- local libwin = LibStub("LibWindow-1.1");
+-- local mFrame = CreateFrame("Frame")
+
+print("Hello world")
