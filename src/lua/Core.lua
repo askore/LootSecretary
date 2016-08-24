@@ -11,11 +11,12 @@ TODO/Notes
 local LootSecretary = LibStub("AceAddon-3.0"):NewAddon("LootSecretary", "AceConsole-3.0", "AceEvent-3.0")
 local libwin = LibStub("LibWindow-1.1")
 local mFrame = CreateFrame("Frame")
+local MyLoot = nil
+local LootTable = {}
 
 LootSecretary:Print("Hello, world!")
 function LootSecretary:OnInitialize()
 	LootSecretary:Print("Welcome to OnInit")
-	-- create the table to hold loot listings
 end
 
 function LootSecretary:OnEnable()
@@ -32,6 +33,11 @@ function LootSecretary:LSConfig(input)
 end
 
 function LootSecretary:CHAT_MSG_LOOT(message, sender, ...)
-	LootSecretary:Print(sender)
+    link = string.match(sender, "You have received (.*)%.")
+    if link ~= nil then
+	    LootSecretary:Print("I found " .. link)
+    else
+	    LootSecretary:Print("I failed but you got " .. sender)
+    end
 end
 LootSecretary:RegisterEvent("CHAT_MSG_LOOT")
