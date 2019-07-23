@@ -4,4 +4,4 @@ This is a test
 
 ---
 
-labels: "label: test"
+labels: "bug"
